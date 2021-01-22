@@ -49,6 +49,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -59,3 +61,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+Rails.application.configure do
+  config.web_console.whitelisted_ips = '110.4.244.211'
+end
+
