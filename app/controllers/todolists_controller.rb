@@ -16,6 +16,14 @@ def  update
   list.update(list_params)
   redirect_to todolist_path(list.id)
 end
+def destroy
+  list = List.find(params[:id]) #データ（レコード）を1件所得
+  list.destroy # データ（レコード）を排除
+  redirect_to todolists_path # 投稿一覧画面へリレダイレクト
+end
+
+def destroy
+end
   def new
     # Viewへ渡すためのインスタント変数にからのモデルオブジェクトを生成する。
     @list = List.new
