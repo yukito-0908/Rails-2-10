@@ -16,7 +16,6 @@ def  update
   list.update(list_params)
   redirect_to todolist_path(list.id)
 end
-
   def new
     # Viewへ渡すためのインスタント変数にからのモデルオブジェクトを生成する。
     @list = List.new
@@ -34,7 +33,7 @@ end
 private
 # ストロングパラメータ
 def list_params
-  params.require(:list).permit(:title, :body)
+  params.require(:list).permit(:title, :body, :image)
 end
 
 end
